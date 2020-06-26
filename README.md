@@ -4,7 +4,7 @@ Project for Comparative Genomics classes.
 ## Requirements
 - `python>=3.6`
 - `BioPython`
-- `mmseqs`
+- `MMseqs2`
 - `MAFFT`
 - `RAxML`
 - `fasturec2`
