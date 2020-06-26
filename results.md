@@ -2,7 +2,7 @@
 
 ### Cel projektu
 
-Jako cel założyłem jak najlepsze odtworzenie ewolucji cyjanobakterii na podstawie [tej](https://www.frontiersin.org/articles/10.3389/fmicb.2019.01612/full#h9) pracy.
+Jako cel założyłem jak najlepsze odtworzenie ewolucji cyjanobakterii na podstawie [tej](https://www.frontiersin.org/articles/10.3389/fmicb.2019.01612/full#h9) pracy. (https://www.frontiersin.org/articles/10.3389/fmicb.2019.01612/full#h9)
 
 Wybrałem 18 gatunków:
 - Acaryochloris marina MBIC11017
@@ -43,7 +43,7 @@ i takie, w których powtarzały się sekwencje z jednego gatunku.
 
 Ostatecznie zostały *2633* klastry. Oto histogram liczności klastrów:
 
-![histogram](https://github.com/santonow/comparative-genomics-project/blob/master/images/hist.png)
+![histogram](https://github.com/santonow/comparative-genomics-project/blob/master/images/hist.png?raw=true)
 
 ### Przyrównywanie sekwencji
 
@@ -71,12 +71,22 @@ Program uruchomiłem 100 razy i wybrałem drzewo z najmniejszym kosztem DL.
 
 Porównanie drzewa wynikowego i faktycznego jest tutaj:
 
-![porownanie](https://github.com/santonow/comparative-genomics-project/blob/master/images/comparison.png)
+![porownanie](https://github.com/santonow/comparative-genomics-project/blob/master/images/comparison.png?raw=true)
 
 Tutaj widać drzewa ukorzenione grupą zewnętrzną złożoną z *Gloeobacter kilauneensis* i *Gloeobacter violaceus*.
 
 Można zauważyć, że trzy klady zostały dobrze zrekonstruowane, oznaczone są one kolorem
 turkusowym, różowym i ~pomarańczowym.
+
+Wystąpiły jednak dość znaczące różnice w przypadku czterech z gatunków. 
+Może być to spowodowane wieloma czynnikami:
+- horyzontalnym transferem genów
+- zbyt dużym zbiorem genów
+
+Praca, na której się opierałem, wykorzystywała do liczenia drzew sekwencje rybosomalne, 
+jako dobre markery filogenetyczne, ewoluujace w mniej więcej stałym tempie. 
+
+W przypadku blisko spokrewnionych gatunków (jak jest w tym przypadku), analiza całych genomów może być skomplikowana.
 
 
 
