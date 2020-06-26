@@ -75,6 +75,8 @@ Porównanie drzewa wynikowego i faktycznego jest tutaj:
 
 Tutaj widać drzewa ukorzenione grupą zewnętrzną złożoną z *Gloeobacter kilauneensis* i *Gloeobacter violaceus*.
 
+Całość analizy zajmuje około 7 godzin na 16 wątkach.
+
 Można zauważyć, że trzy klady zostały dobrze zrekonstruowane, oznaczone są one kolorem
 turkusowym, różowym i ~pomarańczowym.
 
