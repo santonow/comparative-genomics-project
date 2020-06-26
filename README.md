@@ -36,4 +36,4 @@ The script works as follows:
 6. For each alignment (clusters) performs ML tree search with 100 bootstraps using `RAxML`.
 7. Infers consensus trees for each cluster.
 8. Infers a supertree from all clusters using `fasturec2`. 
-   The program is called 100 times and the best result (in terms of the DL cost) is saved to best_supertree.tre file.
+   The program is called 100 times and the best result (in terms of the DL cost) is saved to `best_supertree.tre` file.
