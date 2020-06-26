@@ -32,6 +32,7 @@ mkdir fasta/alignments
 cd fasta/clusters
 for f in *.fasta; do mafft --thread $2 --auto $f > ../alignments/$f; done
 
+# inferring gene trees
 cd ../../
 mkdir trees
 cd trees
@@ -48,6 +49,7 @@ done
 
 mkdir consensus
 
+# creating consensus trees from bootstrap
 for f in cluster*
 do
     cd $f

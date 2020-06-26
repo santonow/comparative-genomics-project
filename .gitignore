@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# custom
+with_plastids/
+without_plastids/
+figtree/
+sizes_with_plastids.txt
+sizes_without_plastids.txt
+hist_with_plastids.png
+hist_without_plastids.png
+Untitled.ipynb
+Project.ipynb
+
