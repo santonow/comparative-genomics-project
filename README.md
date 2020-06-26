@@ -1,6 +1,8 @@
 # comparative-genomics-project
 Project for Comparative Genomics classes.
 
+Github repo: https://github.com/santonow/comparative-genomics-project
+
 ## Requirements
 - `python>=3.6`
 - `BioPython`
