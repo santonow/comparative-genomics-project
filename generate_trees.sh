@@ -4,7 +4,7 @@ echo "Taking accession numbers from $1"
 python scripts/download_gb_files.py $1 gb
 
 # extracting protein sequences
-python scripts/gene_extraction gb fasta
+python scripts/gene_extraction.py gb fasta
 
 # merging all fasta files into one file
 cd fasta
@@ -18,7 +18,7 @@ cd ..
 mkdir clustering
 cd clustering
 mmseqs createdb ../fasta/all_genes.fasta DB
-mmseqs cluster DB DB_clu tmp --threads $2 --min-seq-id 0.5 -c 0.8 --cov-mode 0
+mmseqs cluster DB DB_clu tmp --threads $2 --min-seq-id 0.5 -c 0.8 --cov-mode 1
 mmseqs createtsv DB DB DB_clu DB_clu.tsv
 mmseqs createseqfiledb DB DB_clu DB_seqs_clustered
 mmseqs result2flat DB DB DB_seqs_clustered ../fasta/clustered_seqs.fasta
@@ -64,11 +64,14 @@ cd ..
 python ../scripts/remove_annotations_on_trees.py consensus/all_consensus_trees.txt ../superdrzewa_soft/all_trees_for_fasturec.txt
 
 cd ../superdrzewa_soft
-
-./fasturec2 -Y -G all_trees_for_fasturec.txt -e a
-mv fu.txt ../supertrees_list.txt
+mkdir supertrees_lists
+for i in {1..100}
+do
+    ./fasturec2 -Y -G all_trees_for_fasturec.txt -e a
+    mv fu.txt supertrees_lists/supertrees$i.txt
+done
 cd ..
-python scripts/extract_tree.py supertrees_list.txt best_supertree.tre
+python scripts/pick_best_supertree.py superdrzewa_soft/supertrees_lists best_supertree.tre
 
 echo "Resulting tree in best_supertree.tre file."
 
